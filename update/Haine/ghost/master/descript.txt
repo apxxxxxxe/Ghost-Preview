@@ -12,4 +12,4 @@ kero.name,‚È‚µ
 shiori,satori.dll
 sakura.seriko.defaultsurface,11111
 kero.seriko.defaultsurface,10000
-homeurl,https://raw.githubusercontent.com/apxxxxxxe/Haine/master/update/Haine/
+homeurl,https://raw.githubusercontent.com/apxxxxxxe/GhostDev/master/update/Haine/
