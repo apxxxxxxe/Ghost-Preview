@@ -1,4 +1,5 @@
-Charset,UTF-8
-type,ghost
+charset,Shift_JIS
 name,郊外通りのハイネ
+type,ghost
 directory,Haine
+refresh,0
