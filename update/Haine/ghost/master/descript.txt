@@ -3,7 +3,7 @@ name,Devハイネ
 type,ghost
 craftmanw,aphanite
 craftmanurl,https://apxxxxxxe.github.io/
-homeurl,https://github.com/apxxxxxxe/GhostDev/raw/master/update/Haine/
+homeurl,https://raw.githubusercontent.com/apxxxxxxe/GhostDev/master/update/Haine/
 readme,readme.txt
 sakura.name,ハイネ
 kero.name,なし
