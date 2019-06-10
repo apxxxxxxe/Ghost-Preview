@@ -5,7 +5,7 @@ ghost/master/satori_savedata.txt,nonar,noupdate
 ghost/master/satori_savebackup.txt,nonar,noupdate
 ghost/master/satorite.dat,nonar,noupdate
 ghost/master/satorite.exe,nonar,noupdate
-ghost/master/„Çå„Åó„Å∞.txt,nonar,noupdate
-ghost/master/„Çå„Åó„Å∞.exe,nonar,noupdate
+ghost/master/ÇÍÇµÇŒ.txt,nonar,noupdate
+ghost/master/ÇÍÇµÇŒ.exe,nonar,noupdate
 ghost/master/profile/,nonar,noupdate
 ghost/shell/profile/,nonar,noupdate
