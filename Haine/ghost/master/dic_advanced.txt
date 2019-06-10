@@ -130,20 +130,20 @@
 ＊OnKeyPress
 ＞（Ｒ０）キー
 
-＊aキー
-＞OnFirstBoot
+＃＊aキー
+＃＞OnFirstBoot
 
-＊rキー
-（set,リロードフラグ,1）\![change,ghost,Devハイネ]
+＃＊rキー
+＃（set,リロードフラグ,1）\![change,ghost,郊外通りのハイネ]
 
-＊oキー
-（OnSurfaceRestore）
+＃＊oキー
+＃（OnSurfaceRestore）
 
 ＊tキー
 （）
 
-＊iキー
-＞OnBoot
+＃＊iキー
+＃＞OnBoot
 
-＊qキー
-（set,庭訪問済み,0）（set,書斎訪問済み,0）訪問済フラグリセット
+＃＊qキー
+＃（set,庭訪問済み,0）（set,書斎訪問済み,0）訪問済フラグリセット
