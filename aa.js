@@ -311,7 +311,7 @@ var TJScrollTask = function () {
 window.tj_deck = null;
 
 function tjDeckStart() {
-	console.log("TJDeckスタート！！！"), window.tj_deck = new TJDeck, window.tj_deck.hideMenu(), document.querySelector("textarea.js-compose-text").spellcheck = !1
+	console.log("TJDeckスタート！！！"), window.tj_deck = new TJDeck, window.tj_deck.manageStyle(), window.tj_deck.manageScroll(), window.tj_deck.manageBack(), window.tj_deck.observeClms(), window.tj_deck.observeModals(), window.tj_deck.hideMenu(), window.tj_deck.addTJNav(), document.querySelector("textarea.js-compose-text").spellcheck = !1
 }
 if (document.querySelector(".js-app-columns")) tjDeckStart();
 else var timer = setInterval(function () {
