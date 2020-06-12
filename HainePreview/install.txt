@@ -1,6 +1,6 @@
 charset,Shift_JIS
-name,郊外通りのハイネ
+name,郊外通りのハイネPreview
 type,ghost
-directory,Haine
+directory,HainePreview
 refresh,0
 balloon.directory,Teatime_In_The_Fog
