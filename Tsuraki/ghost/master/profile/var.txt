@@ -1,0 +1,9 @@
+Charset,UTF-8
+install,594746871
+homeurl_found,1
+surfacecount,20
+homeurl,http://ms.shillest.net/ghost/ayalilith/
+update_result,OK(27)
+firstboot,594746909
+commitmemorysize,207044
+lastboot,654822150

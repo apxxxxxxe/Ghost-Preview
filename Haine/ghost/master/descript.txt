@@ -5,7 +5,7 @@ craftmanw,aphanite
 craftmanurl,https://apxxxxxxe.github.io/
 homeurl,https://raw.githubusercontent.com/apxxxxxxe/GhostDev/master/Haine/
 readme,readme.txt
-sakura.name,ハイネ
+sakura.name,ハイネa
 kero.name,なし
 sakura.seriko.defaultsurface,11111
 kero.seriko.defaultsurface,10000
