@@ -42,13 +42,13 @@
 
 ＊拍手内容を入力した
 \![execute,http-post,http://clap.webclap.com/clap.php?id=aphanite&page_id=Haine,--param=message_body="（拍手内容）",--async=webclap]
-＄拍手内容	
 
 ＊拍手内容を空打ちされた
 \_q拍手メッセージが空ですφ。\n送信は中止されました
 
 ＊拍手送信完了
-\_q拍手メッセージを送信しました。
+\_q「（拍手内容）」\n拍手メッセージを送信しました。
+＄拍手内容	
 
 ＊拍手送信失敗
 \_q送信に失敗しました。
@@ -103,12 +103,12 @@
 ＊OnUpdatedataCreating
 
 ＊OnUpdatedataCreated
-\1アップデートファイル作成完了
+\_qアップデートファイル作成完了
 
 ＊OnNarCreating
 
 ＊OnNarCreated
-\1Narアーカイブ作成完了
+\_qNarアーカイブ作成完了
 
 
 ＃専用バルーン関係--------------------------------------------------------------------

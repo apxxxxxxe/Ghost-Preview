@@ -1,5 +1,0 @@
-hello
-{
-	_testval = "‚à‚¿‚à‚¿‚Ä‚·‚Æ"
-	"Hello,World..." + %(_testval)
-}

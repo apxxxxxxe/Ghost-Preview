@@ -3,7 +3,7 @@ name,郊外通りのハイネ-Preview
 type,ghost
 craftmanw,aphanite
 craftmanurl,https://apxxxxxxe.github.io/
-homeurl,https://raw.githubusercontent.com/apxxxxxxe/Ghost-Preview/master/update/Haine-Preview/
+homeurl,https://raw.githubusercontent.com/apxxxxxxe/Ghost-Preview/master/Haine-Preview/
 readme,readme.txt
 sakura.name,ハイネ
 kero.name,なし

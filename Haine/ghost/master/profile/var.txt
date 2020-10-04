@@ -1,9 +1,0 @@
-Charset,UTF-8
-install,609243971
-homeurl_found,1
-surfacecount,24
-homeurl,https://raw.githubusercontent.com/apxxxxxxe/GhostDev/master/Haine/
-update_result,OK(0)
-firstboot,609243971
-commitmemorysize,2091579
-lastboot,613478610
