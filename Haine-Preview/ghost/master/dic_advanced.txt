@@ -33,6 +33,33 @@
 ＄ユーザ	ユーザ
 ＞名乗り後
 
+＃Web拍手------------------------------------------------------------------
+
+＊OnWebClap
+\![open,inputbox,拍手内容,,--limit=1000]φ
+\_q拍手メッセージが作者に送信されますφ。
+バグ報告や要望φ、感想はこちらにお願いします。
+
+＊拍手内容を入力した
+\![execute,http-post,http://clap.webclap.com/clap.php?id=aphanite&page_id=Haine,--param=message_body="（拍手内容）",--async=webclap]
+＄拍手内容	
+
+＊拍手内容を空打ちされた
+\_q拍手メッセージが空ですφ。\n送信は中止されました
+
+＊拍手送信完了
+\_q拍手メッセージを送信しました。
+
+＊拍手送信失敗
+\_q送信に失敗しました。
+（R4）
+
+＊OnExecuteHTTPComplete
+＞拍手送信完了	（R1）==webclap
+
+＊OnExecuteHTTPFailure
+＞拍手送信失敗	（R1）==webclap
+
 ＃アンカー--------------------------------------------------------------------
 
 ＊OnAnchorSelectEx
@@ -51,6 +78,10 @@
 ＊OnShellChanged
 ＞シェル「（R0）」に変更
 \0・（11129）新鮮な気分ね。
+
+＊OnShellChanged
+＞シェル「（R0）」に変更
+\0・（11129）……どう、かしら？
 
 ＊シェル「master」に変更
 \0・（11111）

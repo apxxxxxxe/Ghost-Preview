@@ -3,7 +3,7 @@ __system_settings_version__,2
 char0.bind.savearray,9392=0 9393=0 9394=0 9395=0 9396=0 9398=0 100=1 101=0 102=0 103=0 104=0 106=0 107=0 6700=1 6701=0 6702=0 6703=0 2360=0 2361=0 2362=0 2363=1 2364=0 2365=0 2366=0 3309=0 3300=0 3321=1 3302=0 3303=0 3304=0 3305=0 3306=0 3301=0 3307=0 3308=0 7310=0 7311=0 7312=0 7314=1 4370=0 4371=0 4372=0 4373=0 4374=0 4375=0 4376=0 4377=0 1380=0 1381=0 1382=0 1383=0 1384=1 1385=0 1386=0 1387=0 1388=0 1390=1 1391=0 8351=0 8352=1 8353=0 8354=0 8356=0 8357=0 8358=0 8359=0
 balloon,C:\GD_a3\Ukagaka\Ukagaka-balloon\Teatime_In_The_Fog\
 Char1.balloon.isleft,1
-inputbox.left,960
+inputbox.left,768
 communicatebox.left,707
 balloon0.offset,177.50
 Char0.centery,912
@@ -15,6 +15,6 @@ Char1.centery,912
 Char1.center,1220
 seriko.scaling.percent.x,100
 seriko.scaling.percent.y,100
-inputbox.top,519
+inputbox.top,602
 communicatebox.top,814
 __system_written_flag_do_not_remove__,written
