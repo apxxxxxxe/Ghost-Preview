@@ -3,6 +3,7 @@ name,郊外通りのハイネ-Preview
 type,ghost
 craftmanw,aphanite
 craftmanurl,https://apxxxxxxe.github.io/
+//URLが正しくても404エラーが出ることがある　Github側の問題？時間を置いて再試行を試す
 homeurl,https://raw.githubusercontent.com/apxxxxxxe/Ghost-Preview/master/Haine-Preview/
 readme,readme.txt
 sakura.name,ハイネ
