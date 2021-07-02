@@ -1,0 +1,427 @@
+//******************************************************************************
+// YAYA　ゴーストテンプレート
+// メニュー処理辞書
+//******************************************************************************
+
+//******************************************************************************
+//メインメニューの展開
+//
+//AYATEMPLATE.MenuItemの使い方
+//1つめの文字列＝選択肢に表示する文字列
+//2つめの文字列＝選んだときに実行される関数名
+//3つめの文字列＝改行する量　50%刻み　省略すると100%（＝\n）
+//******************************************************************************
+
+On_balloon_tooltip {
+　if ISFUNC( "BalloonTooltip_%(reference[1])" ) {
+　	EVAL( "BalloonTooltip_%(reference[1])" )
+　}
+}
+
+// 「BalloonTooltip_[選択肢ID]」にツールチップで表示させるテキストを記述
+BalloonTooltip_OnCaroreSet { "（作業時間）-(休憩時間)-（大休憩時間）" }
+
+//------------------------------------------------------------------------------
+//メインメニュー展開
+//------------------------------------------------------------------------------
+OpenMenu
+{
+  if (TalkStatus == 2) {
+    _quickdialogue = '\_q'
+    '\C\c'
+  }else {
+    _quickdialogue = ''
+  }
+  --
+  if (メニュー台詞 == '') { メニュー台詞 = メニュー一言 }
+  if GETTYPE(_argv[0]) == 3 && _argv[0] != "" {
+    メニュー台詞 = _argv[0]
+  }
+  TalkStatus = 2
+
+  "%(メインメニュー)%(_quickdialogue)%(メニュー台詞)\e"
+}
+
+メインメニュー
+{
+    _carotemessage = "\![*]\q[タイマー,OnTimerSelected]"
+    _timerv = ''
+  if (IsCaroteActive == 1) {
+    _totalmin = (carote[0]+carote[1])*CaroteCount
+    _timerv = "\__q[OnTimerStop,%(CaroteCount),%(_totalmin)]%(ICON('stopwatch'))\f[height,12] %(TimerMin)/%(currentcarote)min\__q"
+  } elseif (IsCaroteActive == 2) {
+    _totalmin = CurrentLoop*LoopCount
+    _timerv = "\__q[OnTimerStop,%(LoopCount),%(_totalmin)]%(ICON('stopwatch'))\f[height,12] %(TimerMin)/%(CurrentLoop)min\__q"
+  }
+
+
+  "\_q\*\0\_l[0,1.2em]------------------------------------/
+  \_l[0.8em,@1.5em]\![*]\q[話して,RandomTalk]/
+  \_l[0.8em,@1.3em]\![*]\q[さっきの話,Menu_LASTTALK]/
+  \_l[0.8em,@1.3em]\![*]\q[Web拍手,OnWebClap]/
+  \_l[@1em,]/
+  \_l[1em,@1.5em]/
+  //\![set,autoscroll,disable]\_l[0,%(balloon.lines+2)em]/
+  \_l[0.7em,13.25em]/
+  \__q[OnMenuClose]%(ICON('cross'))\__q\_l[@0.7em,]\__q[OnRightMenu]%(ICON('cog'))\__q"
+  --
+  if (IsCaroteActive == 0) {
+    "\_l[@0.7em,]\__q[OnTimerSelected]%(ICON('stopwatch'))\__q"
+  } else {
+    "\_l[18.5em,13.21em]\f[cursorstyle,none]\f[color,175,175,165]%(_timerv)\f[default]"
+  }
+  --
+  "\_l[0,0]\_q"
+}
+
+メニュー一言{
+  if (GetSurfaceElements(5) == 6 || GetSurfaceElements(5) == 3) {
+    "……h11" + GetSurfaceElements(3) + "10" + EVAL(GetSurfaceElements(5) - 2) + "\w4h11" + GetSurfaceElements(3) + "201あ、呼んだかしら？"
+  } elseif (lastmouseevent == 'MouseDoubleClick0bust') {
+    "h112207ヘンタイ！"
+    "h112204楽しいの？"
+  } else {
+    "h111204はいφ、なにφ？"
+    "h111201うんφ、どうしたのφ？"
+    "h114201聞くわ。"
+    "h114101どうしたのφ？"
+  }
+}
+
+OnRightMenu
+{
+  TalkStatus = 2
+  '\C\c'
+  --
+  "%(右メニュー)\e"
+}
+
+右メニュー
+{
+  _talkintervalmin = aitalkinterval / 60
+  _talkintervalmessage = "なし"
+  if _talkintervalmin != 0 {
+    _talkintervalmessage = "%(_talkintervalmin)分"
+  }
+  
+  "\b[4]\_q/
+  \_l[0.5em,2em]◆喋り頻度\_l[@0.5em,]【現在\_l[@0.3em,]%(_talkintervalmessage)】/
+  \_l[2em,@1.5em]\q[1,OnTalkIntervalSet,60]\_l[@0.5em,]\q[3,OnTalkIntervalSet,180]\_l[@0.5em,]\q[5,OnTalkIntervalSet,300]\_l[@0.5em,]\q[10,OnTalkIntervalSet,600]\_l[@0.5em,]\q[なし,OnTalkIntervalSet,0]/
+  \_l[0.5em,@2em]◆時報\_l[@0.5em,]【現在\_l[@0.3em,]】/
+  \_l[2em,@1.5em]\q[有効,OnJihouSelected,1]\_l[@0.5em,]\q[無効,OnJihouSelected,0]/
+  \_l[0.7em,13.25em]\__q[OnMenuClose]%(ICON('cross'))\__q\_l[@0.7em,]\__q[OpenMenu]%(ICON('arrow-left'))\__q/
+  "
+}
+
+
+ポーズ保持表情
+{
+}
+
+OnTalkIntervalSet
+{
+  aitalkinterval = reference[0]
+  /*
+  _message = ""
+  case aitalkinterval {
+    when 600 {
+      _message = "h111209少しφ、\_w[250]作業のほうに集中するわね"
+    }
+    when 300 {
+      _message = "h111209ゆっくり話しましょう"
+    }
+    when 180 {
+      _message = "h111204いつもどおり話すわ"
+    }
+    when 60 {
+      _message = "h111201たくさんφ？\_w[500]　h111207がんばってみるわ"
+    }
+    when 0 {
+      _message = "h111209静かにしているわ"
+    }
+    others {
+      "\1デバッグ：喋り頻度に意図しない値が入力されました"
+    }
+  }
+  */
+  "\C\c"
+  --
+  OnRightMenu
+}
+
+//------------------------------------------------------------------------------
+//メニュー選択タイムアウト
+//------------------------------------------------------------------------------
+OnChoiceTimeout
+{
+}
+
+
+//******************************************************************************
+//各項目の処理内容
+//******************************************************************************
+
+OnMenuClose
+{
+  メニュー台詞 = ''
+  TalkStatus = 0
+}
+//アンカー　ツールチップ
+
+
+OnCaroteTimer
+{
+
+}
+
+OnTimerSelected
+{
+	"\C\c/
+	\_q\_l[0.5em,2em]◆ポモドーロタイマー/
+	\_l[1.5em,@1.7em]\![*]\q[10-2,OnCaroreSet,10,2]/
+	\_l[1.5em,@1.2em]\![*]\q[15-3,OnCaroreSet,15,3]/
+	\_l[1.5em,@1.2em]\![*]\q[25-5,OnCaroreSet,20,4]/
+	\_l[1.5em,@1.2em]\![*]\q[25-5,OnCaroreSet,25,5]/
+	/
+	\_l[11.5em,2em]◆ループタイマー/
+	\_l[12.5em,@1.7em]\![*]\q[1,OnLoopSet,1]/
+	\_l[12.5em,@1.2em]\![*]\q[10,OnLoopSet,10]/
+	\_l[12.5em,@1.2em]\![*]\q[15,OnLoopSet,15]/
+	\_l[0.7em,13.25em]\__q[OnMenuClose]%(ICON('cross'))\__q\_l[@0.7em,]\__q[OpenMenu]%(ICON('arrow-left'))\__q/
+	"
+}
+
+OnCaroreSet
+{
+  IsCaroteActive = 1
+  carote = (reference[0], reference[1])
+  intervalsecond = second
+  _h = (minute + 1) / 60
+  _m = (minute + 1) % 60
+  "\![raise,OnCaroteTimerOver,100]"
+}
+
+
+OnCaroteTimerOver
+{
+    TimerMin = 0
+    if (reference[0] == carote[0]) {
+      currentcarote = carote[1]
+    } elseif (reference[0] == carote[1]) {
+      currentcarote = carote[0]
+      CaroteCount += 1
+    } elseif (reference[0] == 100) {
+      currentcarote = carote[0]
+      CaroteCount = 0
+    }
+  _carote = currentcarote * 1000 * 60
+  "\![timerraise,%(_carote),1,OnCaroteTimerOver,%(currentcarote)]\_v[sound/clock.mp3]"
+  --
+  
+  if (reference[0] == 100) {
+      "h111204ポモドーロタイマーを開始するわ。\nh114209まずは%(currentcarote)分ね。"
+      return
+  } else {
+      "h111207%(reference[0])分が経過したわ。\nh111204続けて%(currentcarote)分、開始するわね。"
+  }
+  --
+  
+  if (reference[0] == carote[1]) {
+      "\nちなみに現在%(CaroteCount)セット（%(EVAL((carote[0]+carote[1])*CaroteCount))分）よ。"
+  }
+}
+
+OnLoopSet
+{
+  IsCaroteActive = 2
+  intervalsecond = second
+  CurrentLoop = reference[0]
+  "\![raise,OnLoopTimerOver,100]"
+}
+
+OnLoopTimerOver
+{
+   TimerMin = 0
+  _loop = CurrentLoop * 1000 * 60
+  "\![timerraise,%(_loop),1,OnLoopTimerOver,0]\_v[sound/clock.mp3]"
+  --
+  
+  if (reference[0] == 100) {
+    "%(CurrentLoop)分のループタイマーを開始するわ。"
+     LoopCount = 0
+  } else {
+    "%(CurrentLoop)分が経過したわ。次は%(CurrentLoop)分後ね。"
+     LoopCount += 1
+  }
+}
+
+OnTimerStop
+{
+    "\![timerraise,0,1,OnCaroteTimerOver]\![timerraise,0,1,OnLoopTimerOver]"
+    --
+	if (reference[0] == 0) {
+	  "h114209はい、中断したわ。"
+	}else {
+	  "h111207お疲れさま。\n今回は" + reference[0] + "セット（" + reference[1] + "分）ね。"
+	}
+	IsCaroteActive = 0
+	AllCaroteCount += CaroteCount
+}
+
+//---- 何か話して
+Menu_AITALK
+{
+  //---- 明示的にAIトーク開始を指示
+  OnAiTalk
+}
+
+//---- さっきの話は
+Menu_LASTTALK
+{
+  lastanchor = ""
+  "h111209さっきの話ね\_q\n\n\_l[0,@%(balloon.lines+1)em]　\_l[0,@-%(balloon.lines+1)em]\_q"//\w6\n\_q-\w1---\w1------\w1--------------\w1-------\w1----\w1---\w1--\w1-\n\_w[500]\_l[0,@%(balloon.lines)em]　\_l[0,@-%(balloon.lines)em]\_q"
+  --
+  lasttalk
+  //AYATEMPLATE.LastTalk
+}
+
+//---- 他のゴーストと話す
+Menu_GHOSTCOMSTART
+{
+  StartCommunicate
+}
+
+//---- ヘッドライン
+Menu_HEADLINECANCEL
+{
+  //---- キャンセルされた
+  "\0\s[5]はーい。\e"
+}
+
+//---- スタンプ帳
+Menu_STAMP
+{
+  //初期化
+  SHIORI3FW.RegisterTempVar('StampInfo_IsExist','StampInfo_IsNotify','StampInfo_CurrentStampFile','StampInfo_CurrentStampTitle')
+  
+  StampInfo_IsExist = 0
+  StampInfo_IsNotify = 0
+  
+  //スタンプ帳情報を取った後、raiseでOnStampMenuExecを発生させて下に処理を移す
+  "\![raiseplugin,379E0DA0-131C-11DD-E1AC-90009E101CFE,OnStampInfoCall]\![raise,OnStampMenuExec]"
+}
+
+OnStampInfo
+{
+  //スタンプあるかどうか？
+  StampInfo_IsExist = reference[1]
+  StampInfo_IsNotify = 1
+  StampInfo_CurrentStampFile = ''
+  StampInfo_CurrentStampTitle = ''
+  
+  //押している場合は、どのスタンプを押しているか？
+  _stamparray = SPLIT(reference[3],CHR(2))
+  
+  StampInfo_Data = _stamparray
+  
+  _n = ARRAYSIZE(_stamparray)
+  for _i = 0 ; _i < _n ; _i++ {
+    _stamp = RE_SPLIT(_stamparray[_i],'[\x1,]') //バイト値1かカンマかでぶった切る：互換モード対策
+    
+    //ほかで使う場合はここの名前を変えてね
+    if _stamp[0] == 'はろーYAYAわーるど' || _stamp[0] == '紺野ややめ' {
+      StampInfo_CurrentStampFile = _stamp[1]
+      StampInfo_CurrentStampTitle = _stamp[2]
+      break
+    }
+  }
+}
+
+OnStampMenuExec
+{
+  _stamp_type = ''
+  
+  //あった
+  if StampInfo_IsExist {
+    if 'ややめ' _in_ StampInfo_CurrentStampTitle { //マック朗におきかえ
+      "\u\s[10]\h\s[2]もう押してあるのに、\w5まだほしいの？\w9\w9\u\s[11]ならおれのスタンプに置き換えだ！\w9\nどうだうれしいだろ！\w9\w9\h\s[4]\n\nなにやってるの\w5…\w5…"
+      
+      _stamp_type = 'マック朗'
+    }
+    else { //ややめに置き換え
+      "\h\s[0]\u\s[10]もうおれのスタンプが押してあるぞ？\w9\w9\h\s[5]とりあえずわたしのに戻すねー。"
+      
+      _stamp_type = 'ややめ'
+    }
+  }
+  //ない
+  else {
+    "\0\s[0]スタンプ？\w9\w9\n\s[5]はいどうぞ～。\w9\w9\1\s[11]せっかくだから俺はこのスタンプを選ぶぜ！\w9\w9\0\s[4]えーっと。"
+    
+    _stamp_type = 'ややめ'
+  }
+  --
+  if _stamp_type == 'ややめ' {
+    //2行目ファイル、3行目タイトル、4行目コメント
+    "\![raiseplugin,379E0DA0-131C-11DD-E1AC-90009E101CFE,OnStampAdd,/
+    ghost/master/stmp_yym.png,/
+    ややめスタンプ,/
+    紺野ややめが押したスタンプ。服のジッパーの取っ手とデザインが同じ。]"
+  }
+  else {
+    "\![raiseplugin,379E0DA0-131C-11DD-E1AC-90009E101CFE,OnStampAdd,/
+    ghost/master/stmp_mcr.png,/
+    マック朗スタンプ,/
+    マック朗が押したスタンプ。黒林檎。見た目に反して毒はない…と信じたい。]"
+  }
+}
+
+//Web拍手------------------------------------------------------------------
+
+OnWebClap{
+  "\![open,inputbox,WebClapMessage,,--limit=1000]/
+  \_q拍手メッセージが作者に送信されますφ。\n/
+  バグ報告や要望φ、感想はこちらにお願いしますφ。"
+}
+
+WebClapMessageを入力した{
+  "\![execute,http-post,http://clap.webclap.com/clap.php?id=apxxxxxxe,--param=message_body='%(InputMessage)_Haine',--async=webclap]"
+}
+
+WebClapMessageを空打ちされた{
+  '\_q送信を中止しました'
+}
+
+拍手送信完了{
+  "\_q拍手メッセージを送信しました。"
+  WebClapMessage = ''
+}
+
+拍手送信失敗{
+  "\_q送信に失敗しました。\n%(reference[4])"
+  WebClapMessage = ''
+}
+
+OnExecuteHTTPComplete{
+  if (reference[1] == 'webclap') {
+    拍手送信完了
+  }
+}
+
+OnExecuteHTTPFailure{
+  if (reference[1] == 'webclap') {
+    拍手送信失敗
+  }
+}
+
+OnUserInput
+{
+  InputMessage = reference[1]
+  --
+  EVAL("%(reference[0])を入力した")
+}
+
+OnUserInputCancel
+{
+
+}

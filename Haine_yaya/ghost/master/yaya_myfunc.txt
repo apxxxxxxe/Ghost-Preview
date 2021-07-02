@@ -1,0 +1,71 @@
+//******************************************************************************
+//自作関数辞書 新規に追加したものはここ
+//******************************************************************************
+
+/*
+ASURFACE
+{
+  _s = TOSTR(_argv[0])
+  _sea = STRLEN(_s)
+  //_seb = _s - _sea
+  _fse = "%property[currentghost.scope(0).surface.num]"
+  
+  if ((_fse == 7 || _fse == 9) && (_sea >= 1 && _sea <= 3)) { //直前が目閉じかつ目標が全目
+    "\s[%(_seb + _sea + 3)]\_w[200]"
+  }elseif ((_sea == 7 || _sea == 9) && (_fse >= 1 && _fse <= 3)) { // 直前が全目かつ目標が目閉じ
+    "\s[%(_seb + _sea + 3)]\_w[200]"
+  }
+  --
+  "\\_q_s:%(_s)\\n_sea:%(_sea)\\n_seb:%(_seb)\\n_fse:%(_fse)\\_q\\n"
+  --
+  "\s[%(_s)]"
+}
+*/
+
+SETBALLOONSURFACE
+{
+  '\1\s[10000]\0\b[6]'
+}
+
+OnGetSurfaceInfo
+{
+  CurrentSurface = reference[0]
+}
+
+//現在のサーフェス番号を桁で分解して配列として返す
+//10000の位:顔色 1000の位:眉 100の位:腕 10の位:口 1の位:目
+GetSurfaceElements
+{
+  _e = CurrentSurface / POW(10, 5 - _argv[0]) % 10
+  _e
+}
+
+ICON
+{
+  _fontsize = 12
+  if (TOINT(_argv[1]) != 0) {_fontsize = _argv[1]}
+  "\f[cursorstyle,none]\f[height,%(_fontsize)]\f[name,icomoon.ttf]\_u[0x"
+  --
+  case _argv[0] {
+    when 'stopwatch' {
+      'e900'
+    }
+    when 'undo' {
+      'e901'
+    }
+    when 'cog' {
+      'e902'
+    }
+    when 'cross' {
+      'e903'
+    }
+    when 'arrow-right' {
+      'e904'
+    }
+    when 'arrow-left' {
+      'e905'
+    }
+  }
+  --
+  ']\f[default]'
+}

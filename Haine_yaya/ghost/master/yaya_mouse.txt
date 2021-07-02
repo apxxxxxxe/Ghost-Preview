@@ -1,0 +1,126 @@
+//******************************************************************************
+// YAYA　ゴーストテンプレート
+// マウス入力関連辞書
+//******************************************************************************
+
+
+//******************************************************************************
+//マウス処理部
+//
+//以下、実際のトークを記述します。関数名は以下の規則になっています。
+//[種別] + [スコープ] + [部位]
+//種別は、MouseMove, MouseDoubleClick, MouseWheelUp, MouseWheelDown のどれかです。
+//スコープは、\0,\1,といったスコープ番号です。
+//部位は、当たり判定のどの部位かを表します。当たり判定の無い場所でのイベントの場合
+//部位はありません。
+//******************************************************************************
+
+
+//******************************************************************************
+//撫で反応
+//******************************************************************************
+
+MouseMove0head : nonoverlap
+{
+  "h111209ん……ありがとう。\nh111205あなたも無理しないでね。"
+  "h111209あたたかいのね。"
+}
+
+MouseMove0face : nonoverlap
+{
+  "h111205大事なものを扱うみたいだわ。"
+  "h111207くすぐったいわよ。"
+}
+
+MouseMove0bust : nonoverlap
+{
+  //"h114209私はここにいるわ。"
+  "h111207ふふ、くすぐったい。"
+  "h111204それがあなたの愛情表現？"
+  ""
+  "h114205もうからっぽよ。"
+  //"h114205誰かの代わりにはなれないわ。"
+}
+
+//******************************************************************************
+//つつかれ反応
+//******************************************************************************
+
+//本体側のつつかれ反応
+
+MouseDoubleClick0
+{
+  if (TalkStatus != 2) { OpenMenu }
+}
+
+MouseDoubleClick0bust
+{
+  if (TalkStatus == 2) {"\C\c"}
+  --
+  OpenMenu
+}
+
+MouseWheelDown0shoulder
+{
+  "h114209ぎゅーっ。\nh114205……あたたかい。\n人間の体温、ねφ。"
+  "h114209ん。\nh114205……。\nh114201………h114204ふふ。"
+}
+
+MouseWheelDown0hand
+{
+  "h114202うん？\n……h114205手を引いて、h114204それからどうするの？"
+  "h114205指。爪の硬さ。骨を感じて。\n長さ、柔らかさ。\n……h114204ぜんぶ、覚えて。"
+}
+
+//******************************************************************************
+//マウス処理部コア
+//AYATEMPLATE.MouseMoveWheelFuncの2番目の数字が「感度」です。
+//1番目の数字（0か1）は、MoveかWheelかを判別するためのもので、
+//変更の必要はありません。
+//******************************************************************************
+
+OnMouseMove
+{
+  _result = AYATEMPLATE.MouseMoveWheelFunc(0,50,'MouseMove')
+  if _result != '' {
+    TalkStatus = 1
+    _result
+  }
+}
+
+OnMouseWheel
+{
+  _result = ''
+  if TOINT(reference[2]) > 0 {
+    _result = AYATEMPLATE.MouseMoveWheelFunc(1,4,'MouseWheelUp')
+  }
+  else {
+    _result = AYATEMPLATE.MouseMoveWheelFunc(1,4,'MouseWheelDown')
+  }
+  
+  if _result == '' {
+    _result = AYATEMPLATE.MouseMoveWheelFunc(1,4,'MouseWheel')
+  }
+  
+  if _result != '' {
+    TalkStatus = 1
+    _result
+  }
+}
+
+OnMouseDoubleClick
+{
+  AYATEMPLATE.MouseEventExec('MouseDoubleClick')
+}
+
+OnMouseClickEx
+{
+  if reference[5] == 'middle' {
+    _result = AYATEMPLATE.MouseEventExec('MouseWheelClick')
+  }
+  if _result != '' {
+    if TalkStatus != 2 {TalkStatus = 1}
+    _result
+  }
+}
+

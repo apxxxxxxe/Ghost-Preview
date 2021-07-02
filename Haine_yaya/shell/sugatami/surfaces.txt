@@ -1,0 +1,686 @@
+charset, Shift_JIS
+
+descript
+{
+	Version,1
+	collision-sort,descend
+}
+
+--------------------------------------------------------------------------
+
+sakura.cursor
+{
+	
+}
+
+surface111101-111109,111201-111209,112101-112109,112201-112209,113101-113109,113201-113209,114101-114109,114201-114209,121101-121109,121201-121209,122101-122109,122201-122209,123101-123109,123201-123209,124101-124109,124201-124209,131101-131109,131201-131209,132101-132109,132201-132209,133101-133109,133201-133209,134101-134109,134201-134209
+{
+	//通常顔
+}
+
+surface211101-211109,211201-211209,212101-212109,212201-212209,213101-213109,213201-213209,214101-214109,214201-214209,221101-221109,221201-221209,222101-222109,222201-222209,223101-223109,223201-223209,224101-224109,224201-224209,231101-231109,231201-231209,232101-232109,232201-232209,233101-233109,233201-233209,234101-234109,234201-234209
+{
+	//照れ顔
+	animation500600.interval,runonce
+	animation500600.pattern0,overlay,101,0,0,0
+}
+
+surface111101-111109,111201-111209,112101-112109,112201-112209,113101-113109,113201-113209,114101-114109,114201-114209,211101-211109,211201-211209,212101-212109,212201-212209,213101-213109,213201-213209,214101-214109,214201-214209
+{
+	//通常眉
+	animation500500.interval,runonce
+	animation500500.pattern0,overlay,408,0,0,0
+}
+
+surface121101-121109,121201-121209,122101-122109,122201-122209,123101-123109,123201-123209,124101-124109,124201-124209,221101-221109,221201-221209,222101-222109,222201-222209,223101-223109,223201-223209,224101-224109,224201-224209
+{
+	//困り眉
+	animation500500.interval,runonce
+	animation500500.pattern0,overlay,404,0,0,0
+}
+
+surface131101-131109,131201-131209,132101-132109,132201-132209,133101-133109,133201-133209,134101-134109,134201-134209,231101-231109,231201-231209,232101-232109,232201-232209,233101-233109,233201-233209,234101-234109,234201-234209
+{
+	//怒り眉
+	animation500500.interval,runonce
+	animation500500.pattern0,overlay,400,0,0,0
+}
+
+surface111101-111109,111201-111209,121101-121209,131101-131109,131201-131209,211101-211109,211201-211209,221101-221109,221201-221209,231101-231109,231201-231209
+{
+
+	//袖
+	animation505310.interval,bind
+	animation505310.pattern0,overlay,1400,0,0,0
+	animation505311.interval,bind
+	animation505311.pattern0,overlay,1401,0,0,0
+	animation505312.interval,bind
+	animation505312.pattern0,overlay,1402,0,0,0
+	animation505313.interval,bind
+	animation505313.pattern0,overlay,1403,0,0,0
+	animation505314.interval,bind
+	animation505314.pattern0,overlay,1404,0,0,0
+	animation505315.interval,bind
+	animation505315.pattern0,overlay,1405,0,0,0
+	animation505316.interval,bind
+  animation505316.pattern0,overlay,1436,0,0,0
+	animation505318.interval,bind
+  animation505318.pattern0,overlay,1408,0,0,0
+	animation505319.interval,bind
+  animation505319.pattern0,overlay,1409,0,0,0
+  
+	//後ろ手
+	animation502000.interval,runonce
+	animation502000.pattern0,overlay,500,0,0,0
+
+}
+
+surface112101-112109,112201-112209,122101-122109,122201-122209,132101-132109,132201-132209,212101-212109,212201-212209,222101-222109,222201-222209,232101-232109,232201-232209
+{
+	//胸に手
+	animation504000.interval,runonce
+	animation504000.pattern0,overlay,501,0,0,0
+
+	animation599999.interval,runonce
+	animation599999.pattern0,overlay,601,0,0,0
+
+	//袖
+	animation505310.interval,bind
+	animation505310.pattern0,overlay,1400,0,0,0
+	animation505311.interval,bind
+	animation505311.pattern0,overlay,1401,0,0,0
+	animation505312.interval,bind
+	animation505312.pattern0,overlay,1402,0,0,0
+	animation505313.interval,bind
+	animation505313.pattern0,overlay,1403,0,0,0
+	animation505314.interval,bind
+	animation505314.pattern0,overlay,1404,0,0,0
+	animation505315.interval,bind
+	animation505315.pattern0,overlay,1405,0,0,0
+  animation505316.interval,bind
+  animation505316.pattern0,overlay,1406,0,0,0
+	animation505318.interval,bind
+  animation505318.pattern0,overlay,1408,0,0,0
+	animation505319.interval,bind
+  animation505319.pattern0,overlay,1409,0,0,0
+}
+
+surface113101-113109,113201-113209,123101-123109,123201-123209,133101-133109,133201-133209,213101-213109,213201-213209,223101-223109,223201-223209,233101-233109,233201-233209
+{
+	//考える手
+	animation504000.interval,runonce
+	animation504000.pattern0,overlay,502,0,0,0
+	
+	animation599999.interval,runonce
+	animation599999.pattern0,overlay,602,0,0,0
+	
+	//袖
+	animation505310.interval,bind
+	animation505310.pattern0,overlay,1400,0,0,0
+	animation505311.interval,bind
+	animation505311.pattern0,overlay,1401,0,0,0
+	animation505312.interval,bind
+	animation505312.pattern0,overlay,1402,0,0,0
+	animation505313.interval,bind
+	animation505313.pattern0,overlay,1403,0,0,0
+	animation505314.interval,bind
+	animation505314.pattern0,overlay,1404,0,0,0
+	animation505315.interval,bind
+	animation505315.pattern0,overlay,1405,0,0,0
+  animation505316.interval,bind
+  animation505316.pattern0,overlay,1406,0,0,0
+	animation505318.interval,bind
+  animation505318.pattern0,overlay,1408,0,0,0
+	animation505319.interval,bind
+  animation505319.pattern0,overlay,1409,0,0,0
+
+	collisionex13,hand,polygon,271,281,258,294,253,325,256,335,269,331,284,316,284,308
+	collisionex14,hand,polygon,247,417,238,400,214,404,213,412,215,423,223,433,244,433
+}
+
+surface114101-114109,114201-114209,124101-124109,124201-124209,134101-134109,134201-134209,214101-214109,214201-214209,224101-224109,224201-224209,234101-234109,234201-234209
+{
+	//前手
+	animation505000.interval,runonce
+	animation505000.pattern0,overlay,503,0,0,0
+
+	//袖
+	animation505310.interval,bind
+	animation505310.pattern0,overlay,1400,0,0,0
+	animation505311.interval,bind
+	animation505311.pattern0,overlay,1401,0,0,0
+	animation505312.interval,bind
+	animation505312.pattern0,overlay,1402,0,0,0
+	animation505313.interval,bind
+	animation505313.pattern0,overlay,1403,0,0,0
+	animation505314.interval,bind
+	animation505314.pattern0,overlay,1434,0,0,0
+	animation505315.interval,bind
+	animation505315.pattern0,overlay,1435,0,0,0
+  animation505316.interval,bind
+  animation505316.pattern0,overlay,1436,0,0,0
+	animation505318.interval,bind
+  animation505318.pattern0,overlay,1438,0,0,0
+	animation505319.interval,bind
+  animation505319.pattern0,overlay,1439,0,0,0
+
+	collisionex13,hand,polygon,288,423,330,410,336,414,341,422,328,446,317,436,288,442
+	collisionex14,hand,polygon,282,501,262,536,261,550,285,556,299,549,294,521,295,512
+}
+
+surface111101-111109,112101-112109,113101-113109,114101-114109,121101-121109,122101-122109,123101-123109,124101-124109,131101-131109,132101-132109,133101-133109,134101-134109,211101-211109,212101-212109,213101-213109,214101-214109,221101-221109,222101-222109,223101-223109,224101-224109,231101-231109,232101-232109,233101-233109,234101-234109
+{
+	//通常口
+	animation500399.interval,runonce
+	animation500399.pattern0,overlay,350,0,0,0
+
+	animation500401.interval,talk
+	animation500401.pattern0,stop,500399
+	animation500401.pattern1,overlay,304,0,0,0
+	animation500401.pattern2,overlay,350,100,0,0
+	animation500401.pattern3,overlay,304,100,0,0
+	animation500401.pattern4,overlay,351,100,0,0
+	animation500401.pattern5,overlay,350,100,0,0
+	animation500401.pattern6,overlay,362,80,0,0
+	animation500401.pattern7,overlay,304,80,0,0
+	animation500401.pattern8,overlay,-1,80,0,0
+	animation500401.pattern9,start,500399
+}
+
+surface111201-111209,112201-112209,113201-113209,114201-114209,121201-121209,122201-122209,123201-123209,124201-124209,131201-131209,132201-132209,133201-133209,134201-134209,211201-211209,212201-212209,213201-213209,214201-214209,221201-221209,222201-222209,223201-223209,224201-224209,231201-231209,232201-232209,233201-233209,234201-234209
+{
+	//笑い口
+	animation500399.interval,runonce
+	animation500399.pattern0,overlay,322,0,0,0
+
+	animation500401.interval,talk
+	animation500401.pattern0,stop,500399
+	animation500401.pattern1,overlay,303,0,0,0
+	animation500401.pattern2,overlay,322,100,0,0
+	animation500401.pattern3,overlay,303,100,0,0
+	animation500401.pattern4,overlay,361,100,0,0
+	animation500401.pattern5,overlay,322,100,0,0
+	animation500401.pattern6,overlay,362,80,0,0
+	animation500401.pattern7,overlay,303,80,0,0
+	animation500401.pattern8,overlay,-1,80,0,0
+	animation500401.pattern9,start,500399
+}
+
+surface111101,111201,112101,112201,113101,113201,114101,114201,121101,121201,122101,122201,123101,123201,124101,124201,131101,131201,132101,132201,133101,133201,134101,134201,211101,211201,212101,212201,213101,213201,214101,214201,221101,221201,222101,222201,223101,223201,224101,224201,231101,231201,232101,232201,233101,233201,234101,234201
+{
+	//こっち目
+	animation500300.interval,runonce+rarely
+	animation500300.pattern0,overlay,202,0,0,0
+	animation500300.pattern1,overlay,208,500,0,0
+	animation500300.pattern2,overlay,212,100,0,0
+	animation500300.pattern3,overlay,208,100,0,0
+	animation500300.pattern4,overlay,202,100,0,0
+}
+
+surface111102,111202,112102,112202,113102,113202,114102,114202,121102,121202,122102,122202,123102,123202,124102,124202,131102,131202,132102,132202,133102,133202,134102,134202,211102,211202,212102,212202,213102,213202,214102,214202,221102,221202,222102,222202,223102,223202,224102,224202,231102,231202,232102,232202,233102,233202,234102,234202
+{
+	//上の空目
+	animation500300.interval,runonce+rarely
+	animation500300.pattern0,overlay,207,0,0,0
+	animation500300.pattern1,overlay,211,500,0,0
+	animation500300.pattern2,overlay,212,100,0,0
+	animation500300.pattern3,overlay,211,100,0,0
+	animation500300.pattern4,overlay,207,100,0,0
+}
+
+surface111103,111203,112103,112203,113103,113203,114103,114203,121103,121203,122103,122203,123103,123203,124103,124203,131103,131203,132103,132203,133103,133203,134103,134203,211103,211203,212103,212203,213103,213203,214103,214203,221103,221203,222103,222203,223103,223203,224103,224203,231103,231203,232103,232203,233103,233203,234103,234203
+{
+	//あっち目
+	animation500300.interval,runonce+rarely
+	animation500300.pattern0,overlay,205,0,0,0
+	animation500300.pattern1,overlay,210,500,0,0
+	animation500300.pattern2,overlay,212,100,0,0
+	animation500300.pattern3,overlay,210,100,0,0
+	animation500300.pattern4,overlay,205,100,0,0
+}
+
+surface111104,111204,112104,112204,113104,113204,114104,114204,121104,121204,122104,122204,123104,123204,124104,124204,131104,131204,132104,132204,133104,133204,134104,134204,211104,211204,212104,212204,213104,213204,214104,214204,221104,221204,222104,222204,223104,223204,224104,224204,231104,231204,232104,232204,233104,233204,234104,234204
+{
+	//こっち半目
+	animation500300.interval,runonce
+	animation500300.pattern0,overlay,208,0,0,0
+}
+
+surface111105,111205,112105,112205,113105,113205,114105,114205,121105,121205,122105,122205,123105,123205,124105,124205,131105,131205,132105,132205,133105,133205,134105,134205,211105,211205,212105,212205,213105,213205,214105,214205,221105,221205,222105,222205,223105,223205,224105,224205,231105,231205,232105,232205,233105,233205,234105,234205
+{
+	//上の空半目
+	animation500300.interval,runonce
+	animation500300.pattern0,overlay,211,0,0,0
+}
+
+surface111106,111206,112106,112206,113106,113206,114106,114206,121106,121206,122106,122206,123106,123206,124106,124206,131106,131206,132106,132206,133106,133206,134106,134206,211106,211206,212106,212206,213106,213206,214106,214206,221106,221206,222106,222206,223106,223206,224106,224206,231106,231206,232106,232206,233106,233206,234106,234206
+{
+	//あっち半目
+	animation500300.interval,runonce
+	animation500300.pattern0,overlay,210,0,0,0
+}
+
+surface111107,111207,112107,112207,113107,113207,114107,114207,121107,121207,122107,122207,123107,123207,124107,124207,131107,131207,132107,132207,133107,133207,134107,134207,211107,211207,212107,212207,213107,213207,214107,214207,221107,221207,222107,222207,223107,223207,224107,224207,231107,231207,232107,232207,233107,233207,234107,234207
+{
+	//にこ目
+	animation500300.interval,runonce
+	animation500300.pattern0,overlay,215,0,0,0
+}
+
+surface111108,111208,112108,112208,113108,113208,114108,114208,121108,121208,122108,122208,123108,123208,124108,124208,131108,131208,132108,132208,133108,133208,134108,134208,211108,211208,212108,212208,213108,213208,214108,214208,221108,221208,222108,222208,223108,223208,224108,224208,231108,231208,232108,232208,233108,233208,234108,234208
+{
+	//驚き目
+	animation500300.interval,runonce
+	animation500300.pattern0,overlay,213,0,0,0
+}
+
+surface111109,111209,112109,112209,113109,113209,114109,114209,121109,121209,122109,122209,123109,123209,124109,124209,131109,131209,132109,132209,133109,133209,134109,134209,211109,211209,212109,212209,213109,213209,214109,214209,221109,221209,222109,222209,223109,223209,224109,224209,231109,231209,232109,232209,233109,233209,234109,234209
+{
+	//閉じ目
+	animation500300.interval,runonce
+	animation500300.pattern0,overlay,212,0,0,0
+}
+
+surface100000
+{
+	//無
+	element0,overlay,surface100000.png,0,0
+}
+
+//トップス（後ろ手のとき）
+surface111101-111109,111201-111209,121101-121209,131101-131109,131201-131209,211101-211109,211201-211209,221101-221109,221201-221209,231101-231109,231201-231209
+{
+	animation502360.interval,bind
+	animation502360.pattern0,insert,505310
+	animation502360.pattern1,insert,505311
+	animation502360.pattern2,insert,505312
+	animation502360.pattern3,insert,505313
+	animation502360.pattern4,insert,505314
+	animation502360.pattern5,insert,505315
+	animation502360.pattern6,insert,505316
+	animation502360.pattern7,insert,505318
+	animation502360.pattern8,insert,505319
+	animation502360.pattern9,overlay,1200,0,0,0
+
+	animation502361.interval,bind
+	animation502361.pattern0,insert,505310
+	animation502361.pattern1,insert,505311
+	animation502361.pattern2,insert,505312
+	animation502361.pattern3,insert,505313
+	animation502361.pattern4,insert,505314
+	animation502361.pattern5,insert,505315
+	animation502361.pattern6,insert,505316
+	animation502361.pattern7,insert,505318
+	animation502361.pattern8,insert,505319
+	animation502361.pattern9,overlay,1201,0,0,0
+
+	//ワンピースではスカート→袖→胴の順にする animation502362も同様
+	animation502362.interval,bind
+	animation502362.pattern0,overlay,1202,0,0,0
+	animation502362.pattern1,insert,505310
+	animation502362.pattern2,insert,505311
+	animation502362.pattern3,insert,505312
+	animation502362.pattern4,insert,505313
+	animation502362.pattern5,insert,505314
+	animation502362.pattern6,insert,505315
+	animation502362.pattern7,insert,505316
+	animation502362.pattern8,insert,505318
+	animation502362.pattern9,insert,505319
+	animation502362.pattern10,overlay,1306,0,0,0
+
+	animation502363.interval,bind
+	animation502363.pattern0,overlay,1203,0,0,0
+	animation502363.pattern1,insert,505310
+	animation502363.pattern2,insert,505311
+	animation502363.pattern3,insert,505312
+	animation502363.pattern4,insert,505313
+	animation502363.pattern5,insert,505314
+	animation502363.pattern6,insert,505315
+	animation502363.pattern6,insert,505316
+	animation502363.pattern7,insert,505316
+	animation502363.pattern8,insert,505318
+	animation502363.pattern9,insert,505319
+	animation502363.pattern10,overlay,1307,0,0,0
+
+	animation502364.interval,bind
+	animation502364.pattern0,insert,505310
+	animation502364.pattern1,insert,505311
+	animation502364.pattern2,insert,505312
+	animation502364.pattern3,insert,505313
+	animation502364.pattern4,insert,505314
+	animation502364.pattern5,insert,505315
+	animation502364.pattern6,insert,505316
+	animation502364.pattern7,insert,505318
+	animation502364.pattern8,insert,505319
+	animation502364.pattern9,overlay,1204,0,0,0
+
+	animation502365.interval,bind
+	animation502365.pattern0,insert,505310
+	animation502365.pattern1,insert,505311
+	animation502365.pattern2,insert,505312
+	animation502365.pattern3,insert,505313
+	animation502365.pattern4,insert,505314
+	animation502365.pattern5,insert,505315
+	animation502365.pattern6,insert,505316
+	animation502365.pattern7,insert,505318
+	animation502365.pattern8,insert,505319
+	animation502365.pattern9,overlay,1205,0,0,0
+
+	animation502366.interval,bind
+	animation502366.pattern0,insert,505310
+	animation502366.pattern1,insert,505311
+	animation502366.pattern2,insert,505312
+	animation502366.pattern3,insert,505313
+	animation502366.pattern4,insert,505314
+	animation502366.pattern5,insert,505315
+	animation502366.pattern6,insert,505316
+	animation502366.pattern7,insert,505318
+	animation502366.pattern8,insert,505319
+	animation502366.pattern9,overlay,1206,0,0,0
+	
+	animation502367.interval,bind
+	animation502367.pattern0,insert,505310
+	animation502367.pattern1,insert,505311
+	animation502367.pattern2,insert,505312
+	animation502367.pattern3,insert,505313
+	animation502367.pattern4,insert,505314
+	animation502367.pattern5,insert,505315
+	animation502367.pattern6,insert,505316
+	animation502367.pattern7,insert,505318
+	animation502367.pattern8,insert,505319
+	animation502367.pattern9,overlay,1207,0,0,0
+
+	animation502368.interval,bind
+	animation502368.pattern0,insert,505310
+	animation502368.pattern1,insert,505311
+	animation502368.pattern2,insert,505312
+	animation502368.pattern3,insert,505313
+	animation502368.pattern4,insert,505314
+	animation502368.pattern5,insert,505315
+	animation502368.pattern6,insert,505316
+	animation502368.pattern7,insert,505318
+	animation502368.pattern8,insert,505319
+	animation502368.pattern9,overlay,1208,0,0,0
+
+	animation502369.interval,bind
+	animation502369.pattern0,insert,505310
+	animation502369.pattern1,insert,505311
+	animation502369.pattern2,insert,505312
+	animation502369.pattern3,insert,505313
+	animation502369.pattern4,insert,505314
+	animation502369.pattern5,insert,505315
+	animation502369.pattern6,insert,505316
+	animation502369.pattern7,insert,505318
+	animation502369.pattern8,insert,505319
+	animation502369.pattern9,overlay,1209,0,0,0
+
+}
+
+//トップス（後ろ手でないとき）
+surface.append111101-999909,!111101-111109,!111201-111209,!121101-121209,!131101-131109,!131201-131209,!211101-211109,!211201-211209,!221101-221109,!221201-221209,!231101-231109,!231201,!231202,!231203,!231204,!231205,!231206,!231207,!231208,!231209
+{
+	animation502360.interval,bind
+	animation502360.pattern0,overlay,1200,0,0,0
+
+	animation502361.interval,bind
+	animation502361.pattern0,overlay,1201,0,0,0
+
+	animation502362.interval,bind
+	animation502362.pattern0,overlay,1202,0,0,0
+	animation502362.pattern1,overlay,1306,0,0,0
+
+	animation502363.interval,bind
+	animation502363.pattern0,overlay,1203,0,0,0
+	animation502363.pattern1,overlay,1307,0,0,0
+
+	animation502364.interval,bind
+	animation502364.pattern0,overlay,1204,0,0,0
+
+	animation502365.interval,bind
+	animation502365.pattern0,overlay,1205,0,0,0
+
+	animation502366.interval,bind
+	animation502366.pattern0,overlay,1206,0,0,0
+	
+	animation502367.interval,bind
+	animation502367.pattern0,overlay,1207,0,0,0
+
+	animation502368.interval,bind
+	animation502368.pattern0,overlay,1208,0,0,0
+
+	animation502369.interval,bind
+	animation502369.pattern0,overlay,1209,0,0,0
+}
+
+surface.append111101-999909
+{
+	collisionex12,bust,polygon,228,327,271,304,316,325,318,347,311,378,231,375,225,349
+	collisionex10,shoulder,polygon,205,319,206,309,214,301,229,299,251,293,248,312
+	collisionex11,shoulder,polygon,292,293,309,299,332,302,339,315,301,315
+	collisionex7,mouse,ellipse,260,259,283,268
+	collisionex8,head,polygon,292,134,319,151,340,176,339,192,292,190,240,192,201,187,213,158,230,140,259,127
+	collisionex6,face,polygon,270,285,239,267,227,246,220,214,222,189,227,173,315,170,320,189,321,210,315,245,305,268
+	//collision1,152,114,384,326,hair
+	
+	//後髪
+	animation500100.interval,bind
+	animation500100.pattern0,overlay,1100,0,0,0
+	animation500101.interval,bind
+	animation500101.pattern0,overlay,1101,0,0,0
+	animation500102.interval,bind
+	animation500102.pattern0,overlay,1102,0,0,0
+	animation500103.interval,bind
+	animation500103.pattern0,overlay,1103,0,0,0	
+	animation500106.interval,bind
+	animation500106.pattern0,overlay,1106,0,0,0
+	animation500107.interval,bind
+	animation500107.pattern0,overlay,1107,0,0,0
+	animation500108.interval,bind
+	animation500108.pattern0,overlay,1108,0,0,0
+	animation500109.interval,bind
+	animation500109.pattern0,overlay,1109,0,0,0
+	animation500110.interval,bind
+	animation500110.pattern0,overlay,1110,0,0,0
+
+	//素体
+	animation500200.interval,runonce
+	animation500200.pattern0,overlay,1000,0,0,0
+
+	//後ろ手151
+	
+	//頭
+	animation500201.interval,runonce
+	animation500201.pattern0,overlay,1001,0,0,0
+	
+	//目300
+	
+	//口400,401
+	
+	//眉500
+	
+	//照れ顔600
+	
+	//靴下
+	animation501380.interval,bind
+	animation501380.pattern0,overlay,1500,0,0,0
+	animation501381.interval,bind
+	animation501381.pattern0,overlay,1501,0,0,0
+	animation501382.interval,bind
+	animation501382.pattern0,overlay,1502,0,0,0
+	animation501383.interval,bind
+	animation501383.pattern0,overlay,1503,0,0,0
+	animation501384.interval,bind
+	animation501384.pattern0,overlay,1504,0,0,0
+	animation501385.interval,bind
+	animation501385.pattern0,overlay,1505,0,0,0
+	animation501386.interval,bind
+	animation501386.pattern0,overlay,1506,0,0,0
+	animation501387.interval,bind
+	animation501387.pattern0,overlay,1507,0,0,0
+
+	//靴下＋
+	animation501400.interval,bind
+	animation501400.pattern0,overlay,1550,0,0,0
+	animation501401.interval,bind
+	animation501401.pattern0,overlay,1551,0,0,0
+	animation501402.interval,bind
+	animation501402.pattern0,overlay,1552,0,0,0
+	animation501403.interval,bind
+	animation501403.pattern0,overlay,1553,0,0,0
+	animation501404.interval,bind
+	animation501404.pattern0,overlay,1554,0,0,0
+	
+	//トップス 502300
+
+	
+	//トップス+
+	animation506300.interval,bind
+	animation506300.pattern0,overlay,1800,0,0,0
+	animation506301.interval,bind
+	animation506301.pattern0,overlay,1801,0,0,0
+	animation506303.interval,bind
+	animation506303.pattern0,overlay,1803,0,0,0
+	animation506304.interval,bind
+	animation506304.pattern0,overlay,1804,0,0,0
+	animation506305.interval,bind
+	animation506305.pattern0,overlay,1805,0,0,0
+	animation506306.interval,bind
+	animation506306.pattern0,overlay,1806,0,0,0
+	animation506307.interval,bind
+	animation506307.pattern0,overlay,1807,0,0,0
+	animation506308.interval,bind
+	animation506308.pattern0,overlay,1808,0,0,0
+	animation506309.interval,bind
+	animation506309.pattern0,overlay,1809,0,0,0
+	animation506312.interval,bind
+	animation506312.pattern0,overlay,1812,0,0,0
+	animation506313.interval,bind
+	animation506313.pattern0,overlay,1813,0,0,0
+	animation506314.interval,bind
+	animation506314.pattern0,overlay,1814,0,0,0	
+	animation506315.interval,bind
+	animation506315.pattern0,overlay,1815,0,0,0	
+	
+	//コルセットのみ腕より下に
+	animation504510.interval,bind
+	animation504510.pattern0,overlay,1810,0,0,0
+	animation504511.interval,bind
+	animation504511.pattern0,overlay,1811,0,0,0
+	
+	//手back4000
+
+	//帽子
+	animation507000.interval,bind
+	animation507000.pattern0,overlay,1700,0,0,0
+	animation500050.interval,bind
+	animation500050.pattern0,overlay,1707,0,0,0
+	animation507001.interval,bind
+	animation507001.pattern0,overlay,1701,0,0,0
+	animation507002.interval,bind
+	animation507002.pattern0,overlay,1702,0,0,0
+	animation507003.interval,bind
+	animation507003.pattern0,overlay,1703,0,0,0
+	animation507004.interval,bind
+	animation507004.pattern0,overlay,1704,0,0,0
+	animation507005.interval,bind
+	animation507005.pattern0,overlay,1705,0,0,0
+	animation507006.interval,bind
+	animation507006.pattern0,overlay,1706,0,0,0
+	animation507007.interval,bind
+	animation507007.pattern0,overlay,1708,0,0,0
+	animation506508.interval,bind
+	animation506508.pattern0,overlay,1709,0,0,0
+	animation506509.interval,bind
+	animation506509.pattern0,overlay,1710,0,0,0
+	animation506510.interval,bind
+	animation506510.pattern0,overlay,1711,0,0,0
+	animation506511.interval,bind
+	animation506511.pattern0,overlay,1712,0,0,0
+	
+	//袖 507000
+	
+	//未亡人髪表
+	//animation509900.interval,bind
+	//animation509900.pattern0,overlay,1105,0,0,0
+
+	//髪+
+	animation506150.interval,bind
+	animation506150.pattern0,overlay,1150,0,0,0
+	animation506790.interval,bind
+	animation506790.pattern0,overlay,1151,0,0,0
+	animation506791.interval,bind
+	animation506791.pattern0,overlay,1152,0,0,0	
+	
+	//前髪
+	animation506700.interval,bind
+	animation506700.pattern0,overlay,700,0,0,0
+	animation506701.interval,bind
+	animation506701.pattern0,overlay,701,0,0,0
+	animation506702.interval,bind
+	animation506702.pattern0,overlay,702,0,0,0
+	animation506703.interval,bind
+	animation506703.pattern0,overlay,703,0,0,0
+	animation506704.interval,bind
+	animation506704.pattern0,overlay,704,0,0,0
+	animation506705.interval,bind
+	animation506705.pattern0,overlay,705,0,0,0
+	animation506706.interval,bind
+	animation506706.pattern0,overlay,706,0,0,0
+	animation506707.interval,bind
+	animation506707.pattern0,overlay,707,0,0,0
+	animation506708.interval,bind
+	animation506708.pattern0,overlay,708,0,0,0
+	animation506709.interval,bind
+	animation506709.pattern0,overlay,709,0,0,0
+	animation506710.interval,bind
+	animation506710.pattern0,overlay,710,0,0,0
+	
+	
+	
+	animation506699.interval,bind
+	animation506699.pattern0,overlay,799,0,0,0
+	animation506799.interval,bind
+	animation506799.pattern0,overlay,799,0,0,0
+	animation506698.interval,bind
+	animation506698.pattern0,overlay,798,0,0,0
+	animation506798.interval,bind
+	animation506798.pattern0,overlay,798,0,0,0
+	
+	//ボトムス
+	animation504370.interval,bind
+	animation504370.pattern0,overlay,1300,0,0,0
+	animation504371.interval,bind
+	animation504371.pattern0,overlay,1301,0,0,0
+	animation504372.interval,bind
+	animation504372.pattern0,overlay,1302,0,0,0
+	animation504373.interval,bind
+	animation504373.pattern0,overlay,1303,0,0,0
+	animation504374.interval,bind
+	animation504374.pattern0,overlay,1304,0,0,0
+	animation504375.interval,bind
+	animation504375.pattern0,overlay,1305,0,0,0
+
+	//靴
+	animation508351.interval,bind
+	animation508351.pattern0,overlay,1600,0,0,0
+	animation508352.interval,bind
+	animation508352.pattern0,overlay,1601,0,0,0
+	animation508353.interval,bind
+	animation508353.pattern0,overlay,1602,0,0,0
+	animation508354.interval,bind
+	animation508354.pattern0,overlay,1603,0,0,0
+	animation508356.interval,bind
+	animation508356.pattern0,overlay,1604,0,0,0
+	animation508357.interval,bind
+	animation508357.pattern0,overlay,1605,0,0,0
+	animation508358.interval,bind
+	animation508358.pattern0,overlay,1606,0,0,0
+	animation508359.interval,bind
+	animation508359.pattern0,overlay,1607,0,0,0
+	animation508360.interval,bind
+	animation508360.pattern0,overlay,1608,0,0,0
+	animation508361.interval,bind
+	animation508361.pattern0,overlay,1609,0,0,0
+	//手animation5099999
+
+}
